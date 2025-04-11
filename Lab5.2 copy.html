@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Form Đăng ký Quốc Tịch</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+      transition: all 0.3s ease;
+    }
+
+    body {
+      background: linear-gradient(135deg, #d0e7ff, #e8f0fe);
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header, footer {
+      padding: 1rem;
+      color: white;
+      text-align: center;
+    }
+
+    header {
+      background: linear-gradient(90deg, #007bff, #0056b3);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    footer {
+      background-color: #343a40;
+      margin-top: auto;
+    }
+
+    main {
+      display: flex;
+      flex: 1;
+    }
+
+    .container {
+      background: white;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+      width: 100%;
+      max-width: 600px;
+      margin: 30px auto;
+      animation: fadeIn 0.5s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 25px;
+    }
+
+    .form-group {
+      margin-bottom: 18px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    input[type="text"],
+    textarea,
+    select {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 15px;
+      background-color: #f7fbff;
+    }
+
+    input:focus,
+    textarea:focus,
+    select:focus {
+      border-color: #007bff;
+      outline: none;
+      box-shadow: 0 0 5px rgba(0,123,255,0.4);
+    }
+
+    .button-group {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .form-button {
+      padding: 10px 20px;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      color: white;
+      font-size: 15px;
+      transition: 0.25s;
+    }
+
+    .btn-add {
+      background-color: #28a745;
+    }
+
+    .btn-add:hover {
+      background-color: #218838;
+    }
+
+    .btn-edit {
+      background-color: #ffc107;
+      color: #333;
+    }
+
+    .btn-edit:hover {
+      background-color: #e0a800;
+    }
+
+    .btn-delete {
+      background-color: #dc3545;
+    }
+
+    .btn-delete:hover {
+      background-color: #bd2130;
+    }
+
+    .btn-delete:disabled {
+      background-color: #d6d6d6;
+      cursor: not-allowed;
+    }
+
+    @media (max-width: 768px) {
+      main {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .container {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Form Đăng ký Quốc Tịch</h1>
+  </header>
+
+  <main>
+    <div class="container">
+      <h2>Thông Tin Quốc Tịch</h2>
+      <form action="#" method="post">
+        <div class="form-group">
+          <label for="fullname">Họ và Tên:</label>
+          <input type="text" id="fullname" name="fullname" placeholder="Nhập họ và tên của bạn" />
+        </div>
+        <div class="form-group">
+          <label>Quốc Tịch:</label>
+          <select name="country">
+            <option value="vn">Vietnam</option>
+            <option value="us">USA</option>
+            <option value="jp">Japan</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="notes">Ghi Chú:</label>
+          <textarea id="notes" name="notes" placeholder="Nhập ghi chú nếu có"></textarea>
+        </div>
+        <div class="button-group">
+          <button type="button" class="form-button btn-add">Thêm</button>
+          <button type="button" class="form-button btn-edit">Sửa</button>
+          <button type="button" class="form-button btn-delete" disabled>Xóa</button>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Form Đăng ký</p>
+  </footer>
+
+</body>
+</html>

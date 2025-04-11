@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Đăng ký</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+      transition: all 0.3s ease;
+    }
+
+    body {
+      background: #f3e5f5;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header, footer {
+      padding: 1rem;
+      color: white;
+      text-align: center;
+    }
+
+    header {
+      background-color: #6f42c1;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    footer {
+      background-color: #4a148c;
+      margin-top: auto;
+    }
+
+    main {
+      display: flex;
+      flex: 1;
+    }
+
+    aside {
+      background-color: #f8f9fa;
+      padding: 1rem;
+      width: 250px;
+    }
+
+    aside ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    aside ul li {
+      margin-bottom: 10px;
+    }
+
+    aside a {
+      text-decoration: none;
+      color: #6f42c1;
+    }
+
+    .container {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      width: 600px;
+      margin: 30px auto;
+    }
+
+    h2 {
+      text-align: center;
+      color: #4a148c;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: bold;
+      color: #6a1b9a;
+    }
+
+    input[type="text"],
+    input[type="file"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+      background-color: #fafafa;
+    }
+
+    input:focus,
+    textarea:focus,
+    select:focus {
+      border-color: #ab47bc;
+      box-shadow: 0 0 5px #ce93d8;
+      outline: none;
+    }
+
+    .radio-group,
+    .checkbox-group {
+      display: flex;
+      gap: 15px;
+      align-items: center;
+    }
+
+    .form-actions {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+    }
+
+    .btn {
+      padding: 10px 20px;
+      font-weight: bold;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      color: white;
+      font-size: 15px;
+    }
+
+    .btn-submit {
+      background-color: #9b59b6;
+    }
+
+    .btn-submit:hover {
+      background-color: #ba68c8;
+    }
+
+    .btn-cancel {
+      background-color: #8e24aa;
+    }
+
+    .btn-cancel:hover {
+      background-color: #ad42d0;
+    }
+
+    @media (max-width: 768px) {
+      main {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      aside {
+        width: 100%;
+        text-align: left;
+      }
+
+      .container {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Chào Mừng Đến Với Form Đăng Ký</h1>
+</header>
+
+<main>
+  <div class="container">
+    <h2>Form Đăng ký</h2>
+    <form>
+      <div class="form-group">
+        <label for="hoten">Họ và Tên:</label>
+        <input type="text" id="hoten" name="hoten" placeholder="Nhập họ và tên của bạn">
+      </div>
+
+      <div class="form-group">
+        <label>Giới Tính:</label>
+        <div class="radio-group">
+          <label><input type="radio" name="gender" value="Nam" checked> Nam</label>
+          <label><input type="radio" name="gender" value="Nữ"> Nữ</label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Hình Ảnh:</label>
+        <input type="file" name="avatar">
+      </div>
+
+      <div class="form-group">
+        <label>Quốc Tịch:</label>
+        <select name="country">
+          <option value="vn">Vietnam</option>
+          <option value="us">USA</option>
+          <option value="jp">Japan</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Sở Thích:</label>
+        <div class="checkbox-group">
+          <label><input type="checkbox" name="sothich" value="dulich" checked> Du lịch</label>
+          <label><input type="checkbox" name="sothich" value="amnhac"> Âm nhạc</label>
+          <label><input type="checkbox" name="sothich" value="amthuc"> Ẩm thực</label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Ghi Chú:</label>
+        <textarea rows="3" name="note" placeholder="Nhập ghi chú nếu có"></textarea>
+      </div>
+
+      <div class="form-actions">
+        <button type="submit" class="btn btn-submit">Đăng Ký</button>
+        <button type="reset" class="btn btn-cancel">Hủy</button>
+      </div>
+    </form>
+  </div>
+</main>
+
+<footer>
+  <p>&copy; 2025 Form Đăng ký</p>
+</footer>
+
+</body>
+</html>

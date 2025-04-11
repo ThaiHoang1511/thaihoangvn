@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Đăng Nhập</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      margin: 0;
+      background: linear-gradient(to right, #d3bfff, #e8d8ff);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    #header h2 {
+      margin: 20px 0;
+      font-size: 32px;
+      color: #fff;
+      text-shadow: 0 0 6px #d400ff, 0 0 12px #d400ff, 0 0 24px #c700ff;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% {
+        text-shadow: 0 0 6px #d400ff, 0 0 12px #d400ff, 0 0 24px #c700ff;
+      }
+      50% {
+        text-shadow: 0 0 10px #e040ff, 0 0 20px #c700ff, 0 0 30px #ba00f7;
+      }
+      100% {
+        text-shadow: 0 0 6px #d400ff, 0 0 12px #d400ff, 0 0 24px #c700ff;
+      }
+    }
+
+    .form-container {
+      background: rgba(255, 255, 255, 0.95);
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 0 20px rgba(192, 0, 255, 0.3);
+      width: 320px;
+      backdrop-filter: blur(10px);
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 600;
+      color: #6a1b9a;
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #c694f7;
+      border-radius: 8px;
+    }
+
+    .form-group input[type="checkbox"] {
+      margin-right: 5px;
+    }
+
+    .form-actions {
+      text-align: center;
+    }
+
+    .form-actions input[type="submit"] {
+      background-color: #d400ff;
+      color: white;
+      padding: 10px 18px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      box-shadow: 0 0 6px #d400ff, 0 0 12px #d400ff, 0 0 20px #c700ff;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .form-actions input[type="submit"]:hover {
+      background-color: #b400e6;
+      box-shadow: 0 0 12px #d400ff, 0 0 24px #c700ff, 0 0 36px #9e00cc;
+      transform: scale(1.05);
+    }
+
+    #footer {
+      margin-top: 20px;
+      color: #6a1b9a;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="header">
+    <h2>Đăng Nhập</h2>
+  </div>
+
+  <form class="form-container">
+    <div class="form-group">
+      <label for="username">Tên đăng nhập:</label>
+      <input type="text" name="username" id="username" class="form-control">
+    </div>
+
+    <div class="form-group">
+      <label for="password">Mật khẩu:</label>
+      <input type="password" name="password" id="password" class="form-control">
+    </div>
+
+    <div class="form-group">
+      <label><input type="checkbox" name="remember"> Ghi nhớ đăng nhập</label>
+    </div>
+
+    <div class="form-actions">
+      <input type="submit" value="Đăng Nhập">
+    </div>
+  </form>
+
+  <div id="footer">
+    <p>Bản quyền © 2025</p>
+  </div>
+
+</body>
+</html>
